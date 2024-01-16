@@ -113,30 +113,63 @@ body{
     }
 }
 
-
-/* HERO SECTION*/
-
-.hero-section{
-    text-align: center;
-    max-width: 60%;
-    margin: 0 auto;
-    font-size: 4vw;
+.hero__section--container{
+    max-width: 1200px;
+    margin: 10rem auto;
+    padding: 2rem;
 }
 
-@media only screen and (max-width: 768px) {
-    .hero-section{
-        font-size: 6vw;
-        max-width: 80%;
-        color: var(--white);
+.hero__section--content{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
 
+.hero__section--detail{
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero__section--why{
+    color: aqua;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.hero__section--heading{
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--gold);
+
+}
+
+.hero__section--text{
+    font-size: 1.6rem;
+    color: var(--white);
+
+}
+
+.hero__section--image{
+    flex: 0 1 50%;
+}
+
+.hero__section--image img{
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .hero__section--content{
+        flex-direction: column;
     }
-    
-}
 
-.hero-section #explore{
-    border: 2px solid var(--secondary);
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 18px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    .hero__section--detail{
+        order: 2;
+    }
+
+    .hero__section--image{
+        order: 1;
+    }
 }
